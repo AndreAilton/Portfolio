@@ -1,5 +1,10 @@
 import { useState, useEffect } from "react";
 
+interface NavbarProps {
+  navOpen: boolean;
+}
+
+
 const navItems = [
   {
     label: "Pagina Inicial",
@@ -23,7 +28,7 @@ const navItems = [
   },
 ];
 
-function index() {
+const index: React.FC<NavbarProps> = ({ navOpen }) =>{
   const [activeSection, setActiveSection] = useState<string>("home");
 
   const handleScroll = () => {
@@ -48,7 +53,7 @@ function index() {
   }, []);
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${navOpen ? "navbar-open" : ""}`}>
       {navItems.map((item, index) => (
         <a
           key={index}

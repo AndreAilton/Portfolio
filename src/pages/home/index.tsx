@@ -4,6 +4,7 @@ import Header from "../../components/header"
 import Hero from "../../components/Hero"
 import Skill from "../../components/Skills"
 import Work from "../../components/Work"
+import Github from "../../components/GitActive"
 
 function index() {
   return (
@@ -13,6 +14,7 @@ function index() {
         <About/>
         <Skill/>
         <Work/>
+        <Github/>
         <Footer/>
     </div>
   )
