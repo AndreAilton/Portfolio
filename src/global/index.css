@@ -43,13 +43,13 @@ body {
 
 /* Navbar */
 .navbar {
-  @apply  flex-col md:flex-row items-center backdrop-blur-lg rounded-xl md:flex flex hidden max-md:w-2xs; 
+  @apply  flex-col md:flex-row items-center backdrop-blur-lg rounded-xl md:flex flex hidden max-md:w-2xs ease-in-out duration-900; 
 }
 .nav-link {
-  @apply text-zinc-50/80 hover:text-zinc-50/100 p-2 px-5 max-md:w-full text-center;
+  @apply text-zinc-50/80 hover:text-zinc-50/100 p-2 px-5 max-md:w-full text-center ease-in-out duration-900;
 }
 .active-link {
-  @apply bg-white/100 text-black font-bold backdrop-blur-md rounded-lg;
+  @apply bg-white/100 text-black font-bold backdrop-blur-md rounded-lg ease-in-out duration-900;
 }
 
 .nav-link:hover {
@@ -57,7 +57,7 @@ body {
 }
 
 .navbar-open {
-  @apply flex  bg-zinc-900/80 backdrop-blur-lg absolute md:relative md:top-0 top-13 right-0 z-5;
+  @apply flex  bg-zinc-900/80 backdrop-blur-lg absolute md:relative md:top-0 top-13 right-0 z-5  md:w-auto md:gap-0 gap-2 p-4 rounded-xl ease-linear duration-900;
 }
 
 /* Navbar */

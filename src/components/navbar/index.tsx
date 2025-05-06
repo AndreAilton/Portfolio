@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 
 interface NavbarProps {
   navOpen: boolean;
+  onLinkClick: () => void; // Função chamada ao clicar em um link
 }
-
 
 const navItems = [
   {
@@ -26,9 +26,14 @@ const navItems = [
     link: "#work",
     className: "nav-link",
   },
+  {
+    label: "Github",
+    link: "#github",
+    className: "nav-link",
+  },
 ];
 
-const index: React.FC<NavbarProps> = ({ navOpen }) =>{
+const Navbar: React.FC<NavbarProps> = ({ navOpen, onLinkClick }) => {
   const [activeSection, setActiveSection] = useState<string>("home");
 
   const handleScroll = () => {
@@ -59,16 +64,15 @@ const index: React.FC<NavbarProps> = ({ navOpen }) =>{
           key={index}
           href={item.link}
           className={`${item.className} ${
-            activeSection === item.link.substring(1)
-              ? "active-link"
-              : ""
+            activeSection === item.link.substring(1) ? "active-link" : ""
           }`}
+          onClick={onLinkClick} // Fecha o menu ao clicar no link
         >
           {item.label}
         </a>
       ))}
     </nav>
   );
-}
+};
 
-export default index;
+export default Navbar;

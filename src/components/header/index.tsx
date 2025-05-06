@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Navbar from "../navbar";
 
-function index() {
+function Header() {
   const [navOpen, setNavOpen] = useState(false);
 
   return (
@@ -18,19 +18,26 @@ function index() {
             />
           </a>
         </h1>
-        <Navbar navOpen={navOpen}/>
+        {/* Navbar */}
+        <Navbar navOpen={navOpen} onLinkClick={() => setNavOpen(false)} />
+        {/* Menu Button */}
         <button
-          className=" menu-btn"
+          className="menu-btn md:hidden"
           onClick={() => setNavOpen((prev) => !prev)}
         >
           <span className="material-symbols-outlined">
             {navOpen ? "close" : "menu"}
           </span>
         </button>
-        <a href="" className="md:block hidden hover:bg-zinc-50/50  active:scale-95 bg-white  text-black font-medium rounded-2xl px-4 py-2">Entre em Contato</a>
+        <a
+          href="#contact"
+          className="md:block hidden hover:bg-zinc-50/50 active:scale-95 bg-white text-black font-medium rounded-2xl px-4 py-2"
+        >
+          Entre em Contato
+        </a>
       </div>
     </header>
   );
 }
 
-export default index;
+export default Header;
