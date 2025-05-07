@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
               target="_blank"
 
               href="https://wa.me/5516993356039?text=Vim pelo seu portfólio!"
-              className="inline-block mt-4 bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600 transition-colors"
+              className="inline-block mt-4 btn-primary text-white px-6 py-2 rounded-lg hover:bg-green-600 transition-colors"
             >
               Entre em Contato
             </a>

@@ -30,7 +30,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <a
           href={projectLink}
           target="_blank"
-          className="bg-green-500 text-white rounded-2xl p-2 hover:bg-green-600 transition-colors duration-300"
+          className="btn-primary text-white rounded-2xl p-2 hover:bg-green-600 transition-colors duration-300"
         >
           <span className="material-symbols-outlined">north_east</span>
         </a>
