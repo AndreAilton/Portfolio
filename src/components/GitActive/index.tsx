@@ -68,7 +68,7 @@ const GitActive: React.FC = () => {
   };
 
   return (
-    <section id="github" className="section">
+    <section id="github" className="section mb-20">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold">Minhas Contribuições no GitHub</h2>
         <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch]">

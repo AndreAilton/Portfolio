@@ -33,10 +33,10 @@ function index() {
 
           {/* Botões */}
           <div className="flex items-center gap-4 justify-center lg:justify-start">
-            <ButtonPrimary label="Download CV" icon="download" />
+            <ButtonPrimary label="Baixar CV" icon="download" />
             <ButtonOutline
               href="#about"
-              label="Scroll down"
+              label="Role para baixo"
               icon="arrow_downward"
             />
           </div>
@@ -44,13 +44,11 @@ function index() {
 
         {/* Imagem */}
         <div className="hidden lg:block">
-          <figure className="w-full max-w-[480px] ml-auto bg-gradient-to-t from-sky-400 via-sky-400/40 to-transparent rounded-[60px] overflow-hidden">
+          <figure className="w-full max-w-[580px] ml-auto bg-gradient-to-t from-[#7B2E4D] to-[#1A2A44]to-transparent rounded-[60px] overflow-hidden h-[660px]">
             <img
-              src="/images/"
-              width={656}
-              height={800}
+              src="/images/Hero.png"
               alt=" "
-              className="w-full"
+              className="bg-cover w-full object-cover"
             />
           </figure>
         </div>

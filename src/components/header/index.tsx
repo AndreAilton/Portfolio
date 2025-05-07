@@ -31,7 +31,7 @@ function Header() {
         </button>
         <a
           href="#contact"
-          className="md:block hidden hover:bg-zinc-50/50 active:scale-95 bg-white text-black font-medium rounded-2xl px-4 py-2"
+          className="md:block hidden hover:bg-zinc-50/50 active:scale-95 bg-white text-black font-medium rounded-2xl px-4 py-2 text-center"
         >
           Entre em Contato
         </a>

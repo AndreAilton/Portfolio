@@ -8,14 +8,14 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Seção de Contato */}
           <div className="text-center md:text-left">
-            <h2 className="text-2xl font-bold text-white">
-              Aguardo seu Contato
-            </h2>
+
             <p className="mt-2">
               Ficou interessado no meu trabalho? Entre em contato comigo!
             </p>
             <a
-              href="mailto:seu-email@example.com"
+              target="_blank"
+
+              href="https://wa.me/5516993356039?text=Vim pelo seu portfólio!"
               className="inline-block mt-4 bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600 transition-colors"
             >
               Entre em Contato
@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
 
           {/* Sitemap */}
           <div className="text-center">
-            <h3 className="text-xl font-semibold text-white">Sitemap</h3>
+            <h3 className="text-xl font-semibold text-white">Navegue no Site</h3>
             <nav className="flex md:flex-col justify-center md:justify-end gap-4 mt-4">
               <a href="#hero" className="hover:text-white transition-colors">
                 Início
@@ -37,6 +37,9 @@ const Footer: React.FC = () => {
               </a>
               <a href="#work" className="hover:text-white transition-colors">
                 Projetos
+              </a>
+              <a href="#github" className="hover:text-white transition-colors">
+                Github
               </a>
             </nav>
           </div>
@@ -64,15 +67,15 @@ const Footer: React.FC = () => {
                 LinkedIn
               </a>
               <a
-                href="https://twitter.com/seu-usuario"
+                href="https://wa.me/5516993356039?text=Vim pelo seu portfólio!"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors"
               >
-                Twitter
+                Whatsapp
               </a>
               <a
-                href="mailto:seu-email@example.com"
+                href="mailto:andre.ailtonc.10@gmail.com"
                 className="hover:text-white transition-colors"
               >
                 Email

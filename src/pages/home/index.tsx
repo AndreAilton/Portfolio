@@ -5,6 +5,7 @@ import Hero from "../../components/Hero"
 import Skill from "../../components/Skills"
 import Work from "../../components/Work"
 import Github from "../../components/GitActive"
+import Contact from "../../components/Contact"
 
 function index() {
   return (
@@ -15,6 +16,7 @@ function index() {
         <Skill/>
         <Work/>
         <Github/>
+        <Contact/>
         <Footer/>
     </div>
   )
