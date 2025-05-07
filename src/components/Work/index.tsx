@@ -28,7 +28,7 @@ const WorkItems: WorkItemProps[] = [
     title: "Todo-List",
     description: "Projeto de lista de tarefas responsivo com Backend em Node.js e autenticação com JWT",
     tags: ["React", "Node.js", "Mariadb", "AWS", "Express"],
-    projectLink: "https://andreailtondev.tech",
+    projectLink: "https://andreailtondev.tech/agenda/",
   },
 ];
 
