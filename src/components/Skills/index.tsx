@@ -10,7 +10,7 @@ const skillItem = [
   {
     imgSrc: '/images/logos/css3.svg',
     label: 'CSS',
-    desc: 'Estilização'
+    desc: 'Estilização '
   },
   {
     imgSrc: '/images/logos/javascript.svg',
