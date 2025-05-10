@@ -1,9 +1,10 @@
 interface ButtonProps {
   label: string;
   href?: string;
-  target?: '_self' | '_blank' | '_parent' | '_top';
+  target?: "_self" | "_blank" | "_parent" | "_top";
   icon?: string;
   classes?: string;
+  onclick?: () => void;
 }
 
 /**
@@ -12,13 +13,24 @@ interface ButtonProps {
 export const ButtonPrimary: React.FC<ButtonProps> = ({
   label,
   href,
-  target = '_self',
+  target = "_self",
   icon,
-  classes = ''
+  classes = "",
+  onclick,
 }) => {
   if (href) {
     return (
-      <a href={href} target={target} className={`btn btn-primary ${classes}`}>
+      <a
+        href={href}
+        target={target}
+        className={`btn btn-primary ${classes}`}
+        onClick={(e) => {
+          if (onclick) {
+            e.preventDefault(); // Previne o comportamento padrão do link
+            onclick();
+          }
+        }}
+      >
         {label}
         {icon && (
           <span className="material-symbols-outlined" aria-hidden="true">
@@ -30,7 +42,7 @@ export const ButtonPrimary: React.FC<ButtonProps> = ({
   }
 
   return (
-    <button className={`btn btn-primary ${classes}`}>
+    <button className={`btn btn-primary ${classes}`} onClick={onclick}>
       {label}
       {icon && (
         <span className="material-symbols-outlined" aria-hidden="true">
@@ -47,9 +59,9 @@ export const ButtonPrimary: React.FC<ButtonProps> = ({
 export const ButtonOutline: React.FC<ButtonProps> = ({
   label,
   href,
-  target = '_self',
+  target = "_self",
   icon,
-  classes = ''
+  classes = "",
 }) => {
   if (href) {
     return (

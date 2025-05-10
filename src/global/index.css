@@ -19,7 +19,7 @@ body {
 }
 
 .btn-primary {
-  @apply h-11 bg-gradient-to-r from-[#7B2E4D] to-[#A5445D] text-zinc-50 hover:from-[#A5445D] hover:to-[#7B2E4D] active:from-[#7B2E4D] active:to-[#A5445D];
+  @apply h-11 bg-gradient-to-r from-[#7B2E4D] to-[#A5445D] text-zinc-50 hover:from-[#A5445D] hover:to-[#7B2E4D] active:from-[#7B2E4D] active:to-[#A5445D] cursor-pointer;
 }
 
 .btn-secondary {

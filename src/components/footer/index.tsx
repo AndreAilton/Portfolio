@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
           <div className="text-center">
             <h3 className="text-xl font-semibold text-white">Navegue no Site</h3>
             <nav className="flex md:flex-col justify-center md:justify-end gap-4 mt-4">
-              <a href="#hero" className="hover:text-white transition-colors">
+              <a href="#home" className="hover:text-white transition-colors">
                 Início
               </a>
               <a href="#about" className="hover:text-white transition-colors">

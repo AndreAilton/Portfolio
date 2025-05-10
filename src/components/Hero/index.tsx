@@ -1,11 +1,18 @@
 import { ButtonOutline, ButtonPrimary } from "../Button.tsx";
 
 function index() {
+  const DownloadCurriculo = () => {
+    const link = document.createElement("a");
+    link.href = "/Curriculo_Andre.pdf"; // Caminho relativo ao public
+    link.download = "Curriculo_Andre.pdf"; // Nome do arquivo ao baixar
+    link.click();
+  };
+
   return (
     <section id="home" className="pt-28 lg:pt-36">
       <div className="container items-center lg:grid lg:grid-cols-2 lg:gap-10">
         {/* Texto e Avatar */}
-        <div className="flex flex-col items-start  space-y-8 text-left">
+        <div className="flex flex-col items-start space-y-8 text-left">
           {/* Avatar e Status */}
           <div className="flex items-center gap-4 justify-center lg:justify-start">
             <figure className="w-12 h-12 rounded-lg overflow-hidden">
@@ -22,18 +29,22 @@ function index() {
               <span className="relative w-3 h-3 rounded-full bg-emerald-400">
                 <span className="absolute inset-0 rounded-full bg-emerald-400 animate-ping"></span>
               </span>
-              <span>Disponivel para Trabalhos</span>
+              <span>Disponível para Trabalhos</span>
             </div>
           </div>
 
           {/* Título */}
-          <h2 className=" text-5xl font-bold leading-tight max-w-[20ch] sm:max-w-[25ch] lg:max-w-[20ch]">
+          <h2 className="text-5xl font-bold leading-tight max-w-[20ch] sm:max-w-[25ch] lg:max-w-[20ch]">
             Criando soluções digitais que fazem a diferença
           </h2>
 
           {/* Botões */}
           <div className="flex items-center gap-4 justify-center lg:justify-start">
-            <ButtonPrimary label="Baixar CV" icon="download" />
+            <ButtonPrimary
+              label="Baixar CV"
+              icon="download"
+              onclick={DownloadCurriculo} // Corrigido: Chama a função DownloadCurriculo
+            />
             <ButtonOutline
               href="#about"
               label="Role para baixo"
