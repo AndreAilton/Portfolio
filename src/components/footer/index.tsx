@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
             </h3>
             <div className="flex md:flex-col justify-center md:justify-end gap-4 mt-4">
               <a
-                href="https://github.com/seu-usuario"
+                href="https://github.com/AndreAilton"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors"
@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
                 GitHub
               </a>
               <a
-                href="https://linkedin.com/in/seu-usuario"
+                href="https://linkedin.com/in/AndreAilton"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors"
