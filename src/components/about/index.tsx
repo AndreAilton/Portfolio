@@ -8,7 +8,7 @@ const aboutItems = [
       number: 2
     }
   ];
-const AboutItem = "Meu nome e André Tenho 21 Anos, Gosto de Inovação e sempre busco aperfeiçoar. Tenho como hobbies jogar Xadrez, Assistir Filmes e series, e ler livros. Sou um desenvolvedor Front-End com experiência em React.js, Next.js, Tailwind CSS, TypeScript e JavaScript. Estou sempre buscando aprender novas tecnologias e aprimorar minhas habilidades. Sou apaixonado por criar interfaces de usuário incríveis e funcionais, e estou sempre em busca de novos desafios para me ajudar a crescer como desenvolvedor."
+const AboutItem = ", Gosto de Inovação e sempre busco aperfeiçoar. Tenho como hobbies jogar Xadrez, Assistir Filmes e series, e ler livros. Sou um desenvolvedor Front-End com experiência em React.js, Next.js, Tailwind CSS, TypeScript e JavaScript. Estou sempre buscando aprender novas tecnologias e aprimorar minhas habilidades. Sou apaixonado por criar interfaces de usuário incríveis e funcionais, e estou sempre em busca de novos desafios para me ajudar a crescer como desenvolvedor."
 
 export default function index() {
   return (
@@ -20,9 +20,8 @@ export default function index() {
 
         <div className="bg-zinc-800/50 p-7 rounded-2xl md:p-12 reveal-up">
           <p className="text-zinc-300 mb-4 md:mb-8 md:text-xl md:max-w-[60ch]">
-            {AboutItem}
+           Meu nome e André Tenho {new Date().getFullYear() - 2003} Anos{AboutItem}
           </p>
-
           <div className="flex flex-wrap items-center gap-4 md:gap-7">
             {
               aboutItems.map(({ label, number }, key) => (
