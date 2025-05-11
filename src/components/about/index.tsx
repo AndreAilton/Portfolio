@@ -8,7 +8,7 @@ const aboutItems = [
       number: 2
     }
   ];
-const AboutItem = ", Gosto de Inovação e sempre busco aperfeiçoar. Tenho como hobbies jogar Xadrez, Assistir Filmes e series, e ler livros. Sou um desenvolvedor Front-End com experiência em React.js, Next.js, Tailwind CSS, TypeScript e JavaScript. Estou sempre buscando aprender novas tecnologias e aprimorar minhas habilidades. Sou apaixonado por criar interfaces de usuário incríveis e funcionais, e estou sempre em busca de novos desafios para me ajudar a crescer como desenvolvedor."
+const AboutItem = ", Gosto de Inovação e sempre busco aperfeiçoar. Tenho como hobbies jogar Xadrez, Assistir Filmes e series, e ler livros. Sou um desenvolvedor Fullstack com experiência em React.js, express.js, Tailwind CSS, TypeScript e JavaScript. Estou sempre buscando aprender novas tecnologias e aprimorar minhas habilidades. Sou apaixonado por criar interfaces de usuário incríveis e funcionais, e estou sempre em busca de novos desafios para me ajudar a crescer como desenvolvedor."
 
 export default function index() {
   return (
