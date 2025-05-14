@@ -1,10 +1,42 @@
+import { useEffect, useState } from "react";
 import { ButtonOutline, ButtonPrimary } from "../Button.tsx";
 
 function index() {
+  const [typedText, setTypedText] = useState("");
+  const fullText = "Criando soluções digitais que fazem a diferença";
+
+  useEffect(() => {
+    let current = 0;
+    let interval: ReturnType<typeof setInterval>;
+    let timeout: ReturnType<typeof setTimeout>;
+
+    const startTyping = () => {
+      interval = setInterval(() => {
+        setTypedText(fullText.slice(0, current + 1));
+        current++;
+        if (current === fullText.length) {
+          clearInterval(interval);
+          timeout = setTimeout(() => {
+            setTypedText("");
+            current = 0;
+            startTyping();
+          }, 3500); // tempo de pausa após terminar a frase
+        }
+      }, 50);
+    };
+
+    startTyping();
+
+    return () => {
+      clearInterval(interval);
+      clearTimeout(timeout);
+    };
+  }, []);
+
   const DownloadCurriculo = () => {
     const link = document.createElement("a");
-    link.href = "/Curriculo_Andre.pdf"; // Caminho relativo ao public
-    link.download = "Curriculo_Andre.pdf"; // Nome do arquivo ao baixar
+    link.href = "/Curriculo_Andre.pdf";
+    link.download = "Curriculo_Andre.pdf";
     link.click();
   };
 
@@ -35,7 +67,8 @@ function index() {
 
           {/* Título */}
           <h2 className="text-5xl font-bold leading-tight max-w-[20ch] sm:max-w-[25ch] lg:max-w-[20ch]">
-            Criando soluções digitais que fazem a diferença
+            {typedText}
+            <span className="animate-pulse">|</span>
           </h2>
 
           {/* Botões */}
@@ -43,7 +76,7 @@ function index() {
             <ButtonPrimary
               label="Baixar CV"
               icon="download"
-              onclick={DownloadCurriculo} // Corrigido: Chama a função DownloadCurriculo
+              onclick={DownloadCurriculo}
             />
             <ButtonOutline
               href="#about"
