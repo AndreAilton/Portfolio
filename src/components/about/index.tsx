@@ -37,7 +37,7 @@ export default function index() {
             }
 
             <img
-              src="/images/FAVICON.svg"
+              src="images/FAVICON.svg"
               alt="Logo"
               width={30}
               height={30}
