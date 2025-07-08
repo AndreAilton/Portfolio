@@ -49,10 +49,10 @@ function index() {
           <div className="flex items-center gap-4 justify-center lg:justify-start">
             <figure className="w-12 h-12 rounded-lg overflow-hidden">
               <img
-                src="/images/avatar.jpeg"
+                src="images/avatar.jpeg"
                 width={48}
                 height={48}
-                alt="Henry Clark portrait"
+                alt="Andre Ailton"
                 className="object-cover w-full h-full"
               />
             </figure>
@@ -90,7 +90,7 @@ function index() {
         <div className="hidden lg:block">
           <figure className="w-full max-w-[580px] ml-auto bg-gradient-to-t from-[#7B2E4D] to-[#1A2A44]to-transparent rounded-[60px] overflow-hidden h-[660px]">
             <img
-              src="/images/Hero.png"
+              src="images/Hero.png"
               alt=" "
               className="bg-cover w-full object-cover"
             />
