@@ -1,7 +1,7 @@
 # Etapa 1: Build
 FROM node:20-alpine AS build
 
-# Criar diretório de trabalho
+# Diretório de trabalho
 WORKDIR /app
 
 # Copiar package.json e instalar dependências
@@ -13,14 +13,17 @@ COPY . .
 RUN npm run build
 
 # Etapa 2: Servir com Nginx
-# Etapa 2: Produção com Nginx
 FROM nginx:alpine AS prod
 WORKDIR /usr/share/nginx/html
+
+# Limpar conteúdo padrão do Nginx
 RUN rm -rf ./*
+
+# Copiar build do React
 COPY --from=build /app/dist ./
+
+# Copiar configuração do Nginx
 COPY nginx.conf /etc/nginx/conf.d/default.conf 
 
-EXPOSE 3001
+# NÃO expor porta (easyPanel gerencia automaticamente)
 CMD ["nginx", "-g", "daemon off;"]
-
-
