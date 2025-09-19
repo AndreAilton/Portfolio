@@ -1,7 +1,19 @@
 services:
-  react-prod:
-    build: .
-    container_name: portfolio-react-prod
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: meu-app-react:latest
+    container_name: meu-app
     ports:
-      - "8081:80"   # Porta host:container
+      - "${FRONTEND_PORT}:${FRONTEND_INTERNAL_PORT}"
+
     restart: always
+    environment:
+      - NODE_ENV=production
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

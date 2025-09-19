@@ -1,32 +1,32 @@
-# ===== Etapa 1: Build do React com Node =====
+# Stage 1: Build do app com Node.js
 FROM node:20-alpine AS build
 
-# Criar diretório de trabalho
+# Defina o diretório de trabalho
 WORKDIR /app
 
-# Copiar package.json e package-lock.json
+# Copie package.json e package-lock.json primeiro (para cache de dependências)
 COPY package*.json ./
 
-# Instalar dependências
-RUN npm install
+# Instale dependências de produção (use --production para evitar devDependencies)
+RUN npm ci --production
 
-# Copiar o restante do código
+# Copie o código fonte
 COPY . .
 
-# Build do React com Vite
+# Build o app para produção
 RUN npm run build
 
-# ===== Etapa 2: Servir com Nginx =====
+# Stage 2: Imagem de produção com Nginx
 FROM nginx:alpine
 
-# Copiar build do React (Vite gera 'dist')
+# Copie os arquivos buildados da stage anterior
 COPY --from=build /app/dist /usr/share/nginx/html
 
-# Copiar nginx.conf customizado
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+# Copie uma configuração personalizada de Nginx se precisar (opcional)
+# COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Expor porta 80 no container
-EXPOSE 80
+# Exponha a porta 80 (HTTP)
+EXPOSE "${FRONTEND_PORT}:${FRONTEND_INTERNAL_PORT}"
 
-# Iniciar Nginx
+# Rode o Nginx em foreground
 CMD ["nginx", "-g", "daemon off;"]
