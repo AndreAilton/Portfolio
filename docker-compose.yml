@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  react-prod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    environment:
+      - NODE_ENV=production
+    restart: always   # garante que reinicia até após reboot
