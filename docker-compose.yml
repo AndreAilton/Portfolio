@@ -3,7 +3,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: ["npx", "serve", "-s", "build"]
+    ports:
+      - "8081:80"
     environment:
       - NODE_ENV=production
     restart: always   # garante que reinicia até após reboot
