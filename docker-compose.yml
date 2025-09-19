@@ -1,10 +1,7 @@
 services:
   react-prod:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    build: .
+    container_name: portfolio-react-prod
     ports:
-      - "8081:80"
-    environment:
-      - NODE_ENV=production
-    restart: always   # garante que reinicia até após reboot
+      - "8081:80"   # Porta host:container
+    restart: always
