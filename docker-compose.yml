@@ -4,9 +4,8 @@ services:
       context: .
       dockerfile: Dockerfile
     image: meu-app-react:latest
-    container_name: portfolio_front
-    ports:
-      - "${FRONTEND_PORT}:${FRONTEND_INTERNAL_PORT}"
+    expose:
+      - "80"
 
     restart: always
     environment:
