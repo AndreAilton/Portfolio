@@ -20,13 +20,13 @@ RUN npm run build
 FROM nginx:alpine
 
 # Copie os arquivos buildados da stage anterior
-COPY --from=build /app/dist /usr/share/nginx/html
+COPY --from=build /app/dist /usr/share/nginx/html   
 
 # Copie uma configuração personalizada de Nginx se precisar (opcional)
 # COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Exponha a porta 80 (HTTP)
-EXPOSE "${FRONTEND_PORT}:${FRONTEND_INTERNAL_PORT}"
+EXPOSE 80
 
 # Rode o Nginx em foreground
 CMD ["nginx", "-g", "daemon off;"]
