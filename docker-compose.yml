@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile
     image: meu-app-react:latest
     expose:
-      - "80"
+      - "${FRONTEND_PORT}:${FRONTEND_INTERNAL_PORT}"
 
     restart: always
     environment:
