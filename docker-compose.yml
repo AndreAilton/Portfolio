@@ -4,4 +4,4 @@ services:
     container_name: portfolio-app
     restart: always
     ports:
-      - "3000:80"
+      - "${FRONTEND_PORT}:${FRONTEND_INTERNAL_PORT}"
