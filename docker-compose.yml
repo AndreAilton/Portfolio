@@ -3,5 +3,6 @@ services:
     build: .
     container_name: portfolio-app
     restart: always
-    ports:
-      - "${FRONTEND_PORT}:${FRONTEND_INTERNAL_PORT}"
+    expose:
+      - "80"
+
