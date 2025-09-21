@@ -3,13 +3,11 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: meu-app-react:latest
-    ports:
-      - "${FRONTEND_PORT}:${FRONTEND_INTERNAL_PORT}"
-
+    image: portfolio_git:latest
     restart: always
     environment:
       - NODE_ENV=production
+      - PORT=${FRONTEND_INTERNAL_PORT} # Define a porta interna via variável
     networks:
       - app-network
 
